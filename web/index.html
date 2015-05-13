@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<!--
+  Copyright (c) 2015, <your name>. All rights reserved. Use of this source code
+  is governed by a BSD-style license that can be found in the LICENSE file.
+-->
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="scaffolded-by" content="https://github.com/google/stagehand">
+  <title>simple_workbook_demo</title>
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
+  <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+  <meta name="msapplication-TileColor" content="#3372DF">
+
+  <!-- TODO: Swap the two stylesheet references in order to use Sass (and
+       uncomment the sass transformer in the pubspec.yaml file. -->
+  <link rel="stylesheet" href="styles/main_gen.css">
+  <!-- link rel="stylesheet" href="styles/main.css" -->
+</head>
+
+<body>
+
+  <!-- example content. remove if you use your own styles and widgets -->
+
+  <header class="app-bar promote-layer">
+    <div class="app-bar-container">
+      <button class="menu"><img src="images/hamburger.svg" alt="Menu"></button>
+      <h1 class="logo">PCT Workbook Demo</h1>
+      <section class="app-bar-actions">
+      <!-- Put App Bar Buttons Here -->
+      <!-- e.g <button><i class="icon icon-star"></i></button> -->
+      </section>
+    </div>
+  </header>
+
+  <nav class="navdrawer-container promote-layer">
+    <h4>Navigation</h4>
+    <ul>
+      <li><a href="/">Your Practice</a></li>
+      <li><a href="/resources">Your Resources</a></li>
+      <li><a href="/policies">Your Policies</a></li>
+      <li><a href="/risks">Risk Report</a></li>
+      <li><a href="/about">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- contains different views as divs, which the routing system
+       displays or hides when the URL changes -->
+  <main>
+
+    <div id="practice">
+      <p>
+        What is the legal name of your practice?:<br>
+        <input type="text" id="practiceName" placeholder="Type it here..."><br />
+        <button id="practiceSave">Save That Name</button>
+      </p>
+      <div id="postPracticeSave" style="display:none"><a href="/about">Next &rarr;</a></div>
+    </div>
+
+    <div id="resources" style="display:none">
+      <h2>Your Resource List</h2>
+      <div id="resources-menu">
+        <h3>Helpers</h3>
+        <p>Helpers not available in the demo</p>
+        <h3>Computers</h3>
+        <p>Add one Computer</p>
+        <h3>Mobile Devices</h3>
+        <p>Mobile Devices not available in the demo</p>
+        <h3>Office Equipment</h3>
+        <p>Add one File Cabinet</p>
+        <h3>Cloud Services</h3>
+        <p>Cloud Services not available in the demo</p>
+      </div>
+
+      <div id="resources-computer-techmeasures">
+        <h3>Your Computer</h3>
+        <p>
+          Name this computer: <input type="text" id="computerName" placeholder="E.g. My Laptop">
+        </p>
+        <p>
+          Computer Type: Pull-down laptop or desktop
+        </p>
+        <p>
+          Computer Brand: Pull-down Apple or MS
+        </p>
+        <p>
+          Full-Disk Encryption?: yes/no options
+        </p>
+        <p>
+          Anti-Virus/Anti-Malware Software?: Updating pull-down depending on brand choice
+        </p>
+        <p>
+          Firewall Active?: yes/no options
+        </p>
+      </div>
+
+      <div id="resources-cabinet">
+        <h3>Your File Cabinet</h3>
+      </div>
+    </div>
+
+    <div id="policies" style="display:none">
+      Coming soon
+    </div>
+
+    <div id="risks" style="display:none">
+      Coming soon
+    </div>
+
+    <div id="about" style="display:none">
+      <button id="dumpText">Make It!:</button><br />
+      <div id="dataDump"></div>
+    </div>
+
+    <!--<div class="sass-hidden">
+      <p>
+        Note: to use Sass with this application, switch the stylesheet
+        references in the &lt;head&gt; section and uncomment the sass
+        transformer in the pubspec.yaml file.
+      </p>
+    </div>-->
+  </main>
+
+  <script type="application/dart" src="main.dart"></script>
+  <script data-pub-inline src="packages/browser/dart.js"></script>
+</body>
+</html>
